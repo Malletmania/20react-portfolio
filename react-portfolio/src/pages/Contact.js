@@ -1,4 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+// import { validateEmail } from '../utils/helpers'
+// Todo: ensure validate email is being pulled in from utils once helper function is completed
+
+function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (input === 'name') {
+      setName(inputValue);
+    } else if (input === 'message') {
+      setMessage(inputValue)
+    }
+  };
+  const checkEmail = () => {
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is invalid');
+      return;
+    }
+  }
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    checkEmail();
+
+
+    setName('');
+    setMessage('');
+    setEmail('');
+    setErrorMessage('');
+    alert(`Hello ${name}, thank you for reaching out! I look forward to getting in contact with you!`);
+};
 
 export default function Contact() {
   return (
@@ -55,3 +98,7 @@ export default function Contact() {
     </div>
   );
 }
+
+export default Contact;
+
+
