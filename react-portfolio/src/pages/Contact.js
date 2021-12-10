@@ -1,57 +1,57 @@
 import React, { useState } from 'react';
 
-// import { validateEmail } from '../utils/helpers'
+import { validateEmail } from '../utils/helpers'
 // Todo: ensure validate email is being pulled in from utils once helper function is completed
 
 function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
-    if (inputType === 'email') {
+    if (inputType === "email") {
       setEmail(inputValue);
-    } else if (input === 'name') {
+    } else if (inputType === "name") {
       setName(inputValue);
-    } else if (input === 'message') {
-      setMessage(inputValue)
+    } else if (inputType === "message") {
+      setMessage(inputValue);
     }
   };
   const checkEmail = () => {
     if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid');
+      setErrorMessage("Email is invalid");
       return;
     }
-  }
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     checkEmail();
 
+    setName("");
+    setMessage("");
+    setEmail("");
+    setErrorMessage("");
+    alert(
+      `Hello ${name}, thank you for reaching out! I look forward to getting in contact with you!`
+    );
+  };
 
-    setName('');
-    setMessage('');
-    setEmail('');
-    setErrorMessage('');
-    alert(`Hello ${name}, thank you for reaching out! I look forward to getting in contact with you!`);
-};
-
-export default function Contact() {
   return (
     <div>
-      <h1 className="row mb-2 ml-5  mr-5">
+      <h3 className="row mb-2 ml-5  mr-5">
         Contact Page! Please fill out the form below with any questions or
         inquiries.
-      </h1>
+      </h3>
       <form className="form d-block">
-        <div className="row">
+        <div className="row mb-2 ml-5 mr-5">
           <label>Name:</label>
           <input
             value={name}
@@ -64,26 +64,26 @@ export default function Contact() {
             }}
           />
         </div>
-        <div className="row">
+        <div className="row mb-2 ml-5 mr-5">
           <label>Email:</label>
           <input
             value={email}
             name="email"
             onChange={handleInputChange}
-            type="text"
+            type="email"
             placeholder="email"
+            id="emailInput"
             onBlur={() => {
-              email
-                ? setErrorMessage("")
-                : setErrorMessage("Email is required!");
+              setErrorMessage("");
+              email ? checkEmail() : setErrorMessage("Email is required!");
             }}
           />
         </div>
-        <div className="row">
+        <div className="row mb-2 ml-5 mr-5">
           <label>Message:</label>
-          <input
+          <textarea
             value={message}
-            name="message"
+            name="text"
             onChange={handleInputChange}
             type="text"
             placeholder="message"
@@ -94,7 +94,16 @@ export default function Contact() {
             }}
           />
         </div>
+
+        <button className="ml-5 mb-2" type="button" onClick={handleFormSubmit}>
+          Submit
+        </button>
       </form>
+      {errorMessage && (
+        <div>
+          <p className="ml-5 text-danger">{errorMessage}</p>
+        </div>
+      )}
     </div>
   );
 }

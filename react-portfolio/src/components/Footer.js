@@ -1,6 +1,27 @@
 import  "../css/footer.css";
 
 function Footer(){
+
+  const style = {
+    nav: {
+      background: "#3f87a6",
+      width: "100%",
+      height: "10%",
+      display: "flex",
+      justifyContent: "center",
+      // padding: '1%',
+      alignContent: "center",
+      listStyleType: "none",
+      marginTop: "0px",
+    },
+    a: {
+      color: "white",
+      fontSize: "30px",
+      marginLeft: "30px",
+      marginRight: "30px",
+    },
+  };
+
     return (
       <div className="" style={styles.footer}>
       <Button style={styles.link} target="_blank" href='https://github.com/Malletmania' variant="outline-dark">Git Hub</Button>

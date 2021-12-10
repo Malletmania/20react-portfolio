@@ -1,16 +1,37 @@
 import React from 'react';
 
 export default function AboutMe() {
+
+  const styles = {
+    heading: {
+      paddingLeft: "2%",
+    },
+    aboutme: {
+      display: "flex",
+      flexWrap: "wrap",
+      paddingLeft: "2%",
+      paddingRight: "2%",
+      width: "100%",
+      height: "70%",
+    },
+    img: {
+      display: "block",
+      maxWidth: "162px",
+      maxHeight: "378px",
+      height: "auto",
+      width: "auto",
+    },
+  };
+
   return (
     <div className="p-2">
-      <h1>About Page</h1>
+      <h1 style={styles.heading}>About Page</h1>
       <div className="row">
-
         <div className="col-12 col-md-3">
-          <img></img>
+          <img style={styles.img} src={Photo} alt="Benjamin Camarillo"></img>
           {/* img tage of yourself here */}
         </div>
-        <div>
+        <div className="col-12 col-md-9">
           <p>
             My name is Benjamin Camarillo and I have worked in customer service
             and admin work for 8 years. I have 6+ years of leadership and
