@@ -1,4 +1,4 @@
-import  "../css/footer.css";
+import  "../css/Footer.css";
 
 function Footer(){
 
@@ -23,8 +23,8 @@ function Footer(){
   };
 
     return (
-      <div className="" style={styles.footer}>
-      <Button style={styles.link} target="_blank" href='https://github.com/Malletmania' variant="outline-dark">Git Hub</Button>
+      <div className="" style={styles.Footer}>
+      <Button style={styles.link} target="_blank" href='https://github.com/Malletmania' variant="outline-dark">GitHub</Button>
       <Button style={styles.link} target="_blank" href='https://www.linkedin.com/in/benny-camarillo-024a1118a/' variant="outline-dark">Linked In</Button>
       <Button style={styles.link} target="_blank" href={resume} variant="outline-dark">Resume</Button>
     </div>

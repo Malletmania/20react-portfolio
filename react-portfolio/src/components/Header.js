@@ -1,6 +1,5 @@
 import React from 'react';
 import NavTabs from './NavTabs';
-import Background from '../assets/header_backgroud.jpg';
 
 function Header(props) {
   const style={

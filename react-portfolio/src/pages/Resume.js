@@ -1,5 +1,4 @@
 import React from 'react';
-import ksResume from '../assets/karna_sjoberg_resume_web_dev.pdf'
 
 
 export default function Resume() {

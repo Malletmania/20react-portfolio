@@ -25,7 +25,7 @@ export default function Portfolio() {
       </div> 
       <div className="d-flex flex-wrap justify-content-center justify-space-between p-2 m-2">
         <div className="card" style={styles.card}>
-          <img src={Bookstore} className="card-img-top" alt="screenshot of deployed code"/>
+          {/* <img src={Bookstore} className="card-img-top" alt="screenshot of deployed code"/> */}
           <div className="card-body">
             <h5 className="card-title">Bookstore App Group Project</h5>
             <p className="card-text"> Tech Used: <br/>
@@ -41,7 +41,7 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="card" style={styles.card}>
-          <img src={Bookstore} className="card-img-top" alt="screenshot of deployed code"/>
+          {/* <img src={Bookstore} className="card-img-top" alt="screenshot of deployed code"/> */}
           <div className="card-body">
             <h5 className="card-title">Northern Cocktail Viewer App</h5>
             <p className="card-text"> Tech Used: <br/>
@@ -56,7 +56,7 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="card" style={styles.card}>
-          <img src={Employee} className="card-img-top" alt="screenshot of deployed code"/>
+          {/* <img src={Employee} className="card-img-top" alt="screenshot of deployed code"/> */}
           <div className="card-body">
             <h5 className="card-title">Employee Management System</h5>
             <p className="card-text"> Tech Used:<br/>
@@ -72,7 +72,7 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="card" style={styles.card}>
-          <img src={Team} className="card-img-top" alt="screenshot of deployed code"/>
+          {/* <img src={Team} className="card-img-top" alt="screenshot of deployed code"/> */}
           <div className="card-body">
             <h5 className="card-title">Team Builder App</h5>
             <p className="card-text"> Tech Used: <br/>
@@ -86,7 +86,7 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="card" style={styles.card}>
-          <img src={Bookstore} className="card-img-top" alt="screenshot of deployed code"/>
+          {/* <img src={Bookstore} className="card-img-top" alt="screenshot of deployed code"/> */}
           <div className="card-body">
             <h5 className="card-title">Video Game Storage Shelf App Group Project</h5>
             <p className="card-text"> Tech Used: <br/>
